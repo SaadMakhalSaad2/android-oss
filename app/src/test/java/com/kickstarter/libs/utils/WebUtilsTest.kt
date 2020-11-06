@@ -17,7 +17,7 @@ class WebUtilsTest : KSRobolectricTestCase() {
                 .append(BuildConfig.BUILD_TYPE.substring(0, 1).toUpperCase(Locale.US))
                 .append(BuildConfig.BUILD_TYPE.substring(1))
                 .toString()
-        val versionCode = packageInfo.versionCode
+        val versionCode = packageInfo.longVersionCode
         val versionName = packageInfo.versionName
         assertEquals("Kickstarter Android Mobile Variant/$variant Code/$versionCode Version/$versionName",
                 WebUtils.userAgent(Build(packageInfo)))
